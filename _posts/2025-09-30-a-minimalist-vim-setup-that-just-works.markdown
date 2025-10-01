@@ -6,7 +6,6 @@ date:   2025-09-30 16:00:00 -0300
 categories: setup vim development
 ---
 
-# A minimalist Vim setup that just works
 I’ve been using the same Vim setup since 2019, and it still works well for everything I need: coding, writing, editing, and exploring projects across all the languages I’ve worked with.
 
 Don’t get me wrong, I respect devs who maintain super advanced Vim configurations with hundreds of plugins and custom scripts. But that’s definitely not for me. *Keep it simple*.

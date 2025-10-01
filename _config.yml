@@ -4,6 +4,8 @@ hide_site_feed_link: false
 linkedin_username: adoniasvitorio
 github_username:  adoniasvitorio
 
+google_analytics: G-MHDVWWGM96
+
 sass:
   quiet_deps: true
   silence_deprecations: [import]
