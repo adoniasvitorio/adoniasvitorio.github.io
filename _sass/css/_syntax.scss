@@ -1,0 +1,78 @@
+@layer utilities {
+.highlight {
+  background: $color-bg-subtle;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-md;
+
+  pre {
+    margin-bottom: 0;
+    border: none;
+    background: none;
+  }
+}
+
+.highlighter-rouge .highlight {
+  background: $color-bg-subtle;
+}
+
+.highlight {
+  .c   { color: $syntax-comment; font-style: italic; }
+  .err { color: $syntax-err; background-color: $syntax-err-bg; }
+  .k   { color: $syntax-keyword; font-weight: bold; }
+  .o   { font-weight: bold; }
+  .cm  { color: $syntax-comment; font-style: italic; }
+  .cp  { color: $syntax-comment; font-weight: bold; }
+  .c1  { color: $syntax-comment; font-style: italic; }
+  .cs  { color: $syntax-comment; font-weight: bold; font-style: italic; }
+  .gd  { color: $color-text; background-color: $syntax-del-bg; }
+  .ge  { font-style: italic; }
+  .gr  { color: $syntax-error; }
+  .gh  { color: $syntax-comment; }
+  .gi  { color: $color-text; background-color: $syntax-add-bg; }
+  .go  { color: $syntax-output; }
+  .gp  { color: $syntax-dim; }
+  .gs  { font-weight: bold; }
+  .gu  { color: $syntax-heading; }
+  .gt  { color: $syntax-error; }
+  .kc  { color: $syntax-keyword; font-weight: bold; }
+  .kd  { color: $syntax-keyword; font-weight: bold; }
+  .kp  { color: $syntax-keyword; font-weight: bold; }
+  .kr  { color: $syntax-keyword; font-weight: bold; }
+  .kt  { color: $syntax-const; font-weight: bold; }
+  .m   { color: $syntax-const; }
+  .s   { color: $syntax-string; }
+  .na  { color: $syntax-const; }
+  .nb  { color: $syntax-const; }
+  .nc  { color: $syntax-class; font-weight: bold; }
+  .no  { color: $syntax-const; }
+  .ni  { color: $syntax-special; }
+  .ne  { color: $syntax-keyword; font-weight: bold; }
+  .nf  { color: $syntax-class; }
+  .nn  { color: $syntax-dim; }
+  .nt  { color: $syntax-tag; }
+  .nv  { color: $syntax-const; }
+  .ow  { font-weight: bold; }
+  .w   { color: $syntax-whitespace; }
+  .mf  { color: $syntax-const; }
+  .mh  { color: $syntax-const; }
+  .mi  { color: $syntax-const; }
+  .mo  { color: $syntax-const; }
+  .sb  { color: $syntax-string; }
+  .sc  { color: $syntax-string; }
+  .sd  { color: $syntax-string; }
+  .s2  { color: $syntax-string; }
+  .se  { color: $syntax-string; }
+  .sh  { color: $syntax-string; }
+  .si  { color: $syntax-string; }
+  .sx  { color: $syntax-string; }
+  .sr  { color: $syntax-green; }
+  .s1  { color: $syntax-string; }
+  .ss  { color: $syntax-important; }
+  .bp  { color: $syntax-bp; }
+  .vc  { color: $syntax-const; }
+  .vg  { color: $syntax-const; }
+  .vi  { color: $syntax-const; }
+  .il  { color: $syntax-const; }
+}
+}

@@ -1,0 +1,152 @@
+@layer base {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-bg;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.25;
+  margin-bottom: $spacing-md;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+
+p, ul, ol, dl, figure, blockquote, pre, .highlight {
+  margin-bottom: $spacing-md;
+}
+
+ul, ol {
+  margin-left: $spacing-lg;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: $color-text-light;
+  margin-top: $spacing-xs;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:visited {
+    color: $color-accent-dark;
+  }
+
+  &:hover {
+    color: $color-accent-hover;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: $spacing-lg 0;
+}
+
+blockquote {
+  color: $color-text-light;
+  border-left: 3px solid $color-accent;
+  padding: $spacing-sm $spacing-md;
+  font-style: italic;
+  background-color: $color-bg-subtle;
+  border-radius: 0 $border-radius $border-radius 0;
+  margin: $spacing-lg 0;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+pre,
+code {
+  font-size: 0.9rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  background-color: $color-bg-subtle;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+code {
+  padding: 2px 6px;
+}
+
+pre {
+  padding: $spacing-md;
+  overflow-x: auto;
+
+  > code {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+}
+
+table {
+  margin-bottom: $spacing-lg;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid $color-border;
+  font-size: 0.9375rem;
+
+  tr:nth-child(even) {
+    background-color: $color-bg-subtle;
+  }
+
+  th, td {
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $color-border;
+  }
+
+  th {
+    background-color: $color-bg-muted;
+    font-weight: $font-weight-bold;
+  }
+}
+}

@@ -1,0 +1,128 @@
+@layer components {
+.site-header {
+  border-bottom: 1px solid $color-border;
+  background-color: $color-bg;
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.02em;
+    color: $color-text;
+    line-height: 1;
+    text-decoration: none;
+
+    &:visited {
+      color: $color-text;
+    }
+
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__nav-trigger {
+    display: none;
+  }
+
+  &__menu-icon {
+    display: none;
+  }
+
+  &__nav-links {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__nav-link {
+    font-size: 0.9375rem;
+    font-weight: $font-weight-normal;
+    color: $color-text-light;
+    transition: color 0.15s ease;
+    line-height: 1;
+
+    &:visited {
+      color: $color-text-light;
+    }
+
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    .wrapper {
+      height: 56px;
+      position: relative;
+    }
+
+    &__nav {
+      position: absolute;
+      top: 8px;
+      right: $spacing-md;
+      background-color: $color-bg;
+      border: 1px solid $color-border;
+      border-radius: $border-radius;
+      text-align: right;
+      z-index: 10;
+    }
+
+    &__nav-trigger ~ &__nav-links {
+      clear: both;
+      display: none;
+    }
+
+    &__nav-trigger:checked ~ &__nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: $spacing-sm $spacing-md $spacing-md;
+      gap: $spacing-sm;
+    }
+
+    label[for="nav-trigger"] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 11;
+      position: relative;
+    }
+
+    &__menu-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+
+      svg {
+        fill: $color-text;
+      }
+    }
+
+    &__nav-link {
+      display: block;
+      padding: $spacing-xs 0;
+    }
+  }
+}
+}

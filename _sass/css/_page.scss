@@ -1,0 +1,25 @@
+@layer pages {
+.page {
+  &__header {
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-lg;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: $color-text;
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 1.625rem;
+    }
+  }
+
+  &__body {
+    line-height: $line-height-base;
+  }
+}
+}

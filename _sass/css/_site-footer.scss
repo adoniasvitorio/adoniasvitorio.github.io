@@ -1,0 +1,32 @@
+@layer components {
+.site-footer {
+  border-top: 1px solid $color-border;
+  padding: $spacing-lg 0;
+  background-color: $color-bg;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__tagline {
+    font-size: 0.875rem;
+    color: $color-text-light;
+    margin: 0;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+}
+}

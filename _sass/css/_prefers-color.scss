@@ -1,0 +1,180 @@
+@layer utilities {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: $color-bg-dark;
+      color: $color-text-dark;
+    }
+
+    a {
+      color: $color-accent-dark-600;
+    }
+
+    header.site-header,
+    footer.site-footer {
+      background-color: $color-bg-dark;
+      border-color: $color-border-dark;
+    }
+
+    .site-header,
+    header.site-header {
+      background-color: $color-bg-dark;
+      color: $color-text-dark;
+    }
+
+    .site-header__title,
+    .site-header__nav-link,
+    header.site-header a {
+      color: $color-text-dark;
+    }
+
+    .site-header__nav-link:hover,
+    header.site-header a:hover {
+      color: $color-accent-dark-600;
+    }
+
+    .site-footer,
+    footer.site-footer {
+      background-color: $color-bg-dark;
+      color: $color-text-muted-dark;
+    }
+
+    .site-footer__tagline,
+    .site-footer__social,
+    .site-footer a {
+      color: $color-text-muted-dark;
+    }
+
+    header.site-header a,
+    header.site-header a *,
+    .site-header a,
+    .site-header__nav-link,
+    .site-header__title,
+    footer.site-footer a,
+    footer.site-footer a *,
+    .site-footer,
+    .site-footer * {
+      color: $color-text-dark !important;
+      fill: currentColor !important;
+    }
+
+    /* social icon gray class override */
+    .grey {
+      color: $color-text-muted-dark !important;
+    }
+
+    /* Target FontAwesome classes and svg paths specifically for header/footer */
+    header.site-header .fa,
+    header.site-header .fa-brands,
+    header.site-header .fa-github,
+    footer.site-footer .fa,
+    footer.site-footer .fa-brands,
+    footer.site-footer .fa-github,
+    .social-list__icon.fa,
+    .social-list__icon.fa-brands {
+      color: $color-text-muted-dark !important;
+    }
+
+    /* Ensure SVG hamburger icon matches text color */
+    header.site-header .site-header__menu-icon svg path {
+      fill: $color-text-dark !important;
+    }
+
+    /* Ensure any SVG icons inside footer inherit the muted dark color */
+    footer.site-footer svg path {
+      fill: $color-text-muted-dark !important;
+    }
+
+    .wrapper,
+    .site-main {
+      background: transparent;
+    }
+
+    .post__title,
+    .post-list__link,
+    .site-header__title {
+      color: $color-text-dark;
+    }
+
+    .post__title,
+    .post__title a,
+    .page__title,
+    .page__title a {
+      color: $color-text-dark;
+    }
+
+    .post__meta,
+    .post-list__meta,
+    .site-footer__tagline,
+    .social-list__link {
+      color: $color-text-muted-dark;
+    }
+
+    .post__tag,
+    .post-list__tags a,
+    .social-list__icon {
+      color: $color-accent-dark-500;
+      border-color: $color-border-dark;
+    }
+
+    table, th, td {
+      border-color: $color-border-dark;
+    }
+
+    blockquote {
+      background-color: $color-blockquote-bg-dark;
+      border-left-color: $color-accent-dark-600;
+      color: $color-blockquote-text-dark;
+    }
+
+    .highlight,
+    pre:not(.highlight) {
+      background-color: $color-code-bg-dark;
+      border-color: $color-code-border-dark;
+      color: $color-text-dark;
+    }
+
+    .highlight pre,
+    pre > code {
+      background-color: transparent;
+      border: none;
+      color: $syntax-dark-comment;
+    }
+
+    :not(pre) > code {
+      background-color: $color-code-inline-bg-dark;
+      border-color: $color-code-border-dark;
+      color: $color-text-dark;
+    }
+
+    .highlight {
+      .c, .cm, .cp, .c1, .cs { color: $syntax-dark-comment; }
+      .k, .kc, .kd, .kp, .kr, .ne { color: $syntax-dark-keyword; font-weight: bold; }
+      .kt { color: $syntax-dark-builtin; font-weight: bold; }
+      .m, .mi, .mf, .mh, .mo, .il { color: $syntax-dark-number; }
+      .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: $syntax-dark-string; }
+      .na, .nb, .no, .vc, .vg, .vi { color: $syntax-dark-builtin; }
+      .nc { color: $syntax-dark-class; font-weight: bold; }
+      .nf { color: $syntax-dark-class; }
+      .nv, .mf, .mh, .mi, .mo { color: $syntax-dark-number; }
+      .ni { color: $syntax-dark-special; }
+      .nt { color: $syntax-dark-tag; }
+      .nn, .gp { color: $syntax-dark-comment; }
+      .sr { color: $syntax-dark-tag; }
+      .ss { color: $syntax-dark-special; }
+      .err { color: $syntax-dark-keyword; background-color: transparent; }
+      .o, .ow { color: $syntax-dark-keyword; }
+      .gh, .gu { color: $syntax-dark-comment; }
+      .gd { color: $syntax-dark-keyword; background-color: $syntax-dark-diff-del-bg; }
+      .gi { color: $syntax-dark-tag; background-color: $syntax-dark-diff-add-bg; }
+    }
+
+    .pagination__current,
+    .pagination__link {
+      color: $color-accent-contrast;
+    }
+  }
+}

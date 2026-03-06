@@ -7,6 +7,8 @@ github_username:  adoniasvitorio
 google_analytics: G-MHDVWWGM96
 
 sass:
+  sass_dir: _sass
+  style: compressed
   quiet_deps: true
   silence_deprecations: [import]
 
@@ -14,6 +16,7 @@ sass:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
 
 minima:
   hide_site_feed_link: true
@@ -24,3 +27,23 @@ minima:
     - title: "LinkedIn"
       url: "https://www.linkedin.com/in/adoniasvitorio/"
       icon: "fab fa-linkedin"
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: /tag/:name/
+
+# Notes collection for short snippets / gists
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note

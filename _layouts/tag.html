@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+{%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+<section class="tag-archive">
+  <h1 class="tag-archive__heading">Posts tagged "{{ page.title }}"</h1>
+  <ul class="tag-archive__list">
+    {%- if page.posts -%}
+      {%- for post in page.posts -%}
+      <li class="tag-archive__item">
+        <a class="tag-archive__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="tag-archive__date">{{ post.date | date: date_format }}</span>
+      </li>
+      {%- endfor -%}
+    {%- else -%}
+      <li class="tag-archive__item">No posts found for this tag.</li>
+    {%- endif -%}
+  </ul>
+
+  <p><a class="tag-archive__back" href="{{ '/' | relative_url }}">&larr; All posts</a></p>
+</section>

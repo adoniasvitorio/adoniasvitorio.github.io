@@ -1,0 +1,32 @@
+---
+layout: base
+---
+
+<article class="post post--note">
+  {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+  <header class="post__header">
+    <h1 class="post__title">{{ page.title }}</h1>
+    <p class="post__meta">
+      {{ page.date | date: date_format }}
+    </p>
+  </header>
+
+  <div class="post__content">
+    {{ content }}
+  </div>
+
+  {%- if page.tags -%}
+  <p class="post__tags">
+    <strong>hashtags: </strong>
+    {%- for tag in page.tags -%}
+    {%- assign tslug = tag | slugify -%}
+    <a class="post__tag" href="{{ '/tag/' | append: tslug | append: '/' | relative_url }}">#{{ tag }}</a>{% unless forloop.last %} {% endunless %}
+    {%- endfor -%}
+  </p>
+  {%- endif -%}
+
+  <nav class="post__navigation">
+    <a class="post__back-link" href="{{ '/notes/' | relative_url }}">&larr; All notes</a>
+  </nav>
+
+</article>

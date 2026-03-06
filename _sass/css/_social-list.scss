@@ -1,0 +1,42 @@
+@layer components {
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+
+  &__item {
+    line-height: 1;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: 0.875rem;
+    color: $color-text-light;
+    transition: color 0.15s ease;
+
+    &:visited {
+      color: $color-text-light;
+    }
+
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    font-size: 1.1rem;
+  }
+
+  &__username {
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}
+}
