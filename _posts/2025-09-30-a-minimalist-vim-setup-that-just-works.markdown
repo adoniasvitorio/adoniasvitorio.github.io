@@ -12,7 +12,8 @@ Don’t get me wrong. I respect devs who maintain advanced Vim configurations wi
 
 This post is for anyone who wants a clean, reliable Vim experience without unnecessary complexity. If you’re starting with Vim or prefer a minimalist setup, this guide is for you.
 
-![Vim Setup Screenshot](https://github.com/user-attachments/assets/ff917e83-694c-42f3-acc8-d95e2a693c04)
+<img width="1356" height="761" alt="VI demo screen" src="https://github.com/user-attachments/assets/82160633-7d3f-41fd-99d3-c052a2d93f23" />
+
 
 
 ## Why This Setup Works
