@@ -12,10 +12,6 @@ Don’t get me wrong. I respect devs who maintain advanced Vim configurations wi
 
 This post is for anyone who wants a clean, reliable Vim experience without unnecessary complexity. If you’re starting with Vim or prefer a minimalist setup, this guide is for you.
 
-<img width="1356" height="761" alt="VI demo screen" src="https://github.com/user-attachments/assets/82160633-7d3f-41fd-99d3-c052a2d93f23" />
-
-
-
 ## Why This Setup Works
 
 This configuration follows a few simple principles:
@@ -29,7 +25,7 @@ It’s a setup that stays out of your way while still being powerful.
 
 If you're curious, the full configuration is available here:
 
-👉 https://github.com/adoniasvitorio/min-vimrc
+👉 [https://adoniasvitorio.github.io/notes/2026-03-05-minimal-vim-setup/](https://adoniasvitorio.github.io/notes/2026-03-05-minimal-vim-setup/)
 
 ## Getting Started
 
