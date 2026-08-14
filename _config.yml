@@ -16,7 +16,6 @@ sass:
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-archives
 
 minima:
   hide_site_feed_link: true
@@ -27,13 +26,6 @@ minima:
     - title: "LinkedIn"
       url: "https://www.linkedin.com/in/adoniasvitorio/"
       icon: "fab fa-linkedin"
-jekyll-archives:
-  enabled:
-    - tags
-  layouts:
-    tag: tag
-  permalinks:
-    tag: /tag/:name/
 
 # Notes collection for short snippets / gists
 collections:
