@@ -171,10 +171,5 @@
       .gd { color: $syntax-dark-keyword; background-color: $syntax-dark-diff-del-bg; }
       .gi { color: $syntax-dark-tag; background-color: $syntax-dark-diff-add-bg; }
     }
-
-    .pagination__current,
-    .pagination__link {
-      color: $color-accent-contrast;
-    }
   }
 }

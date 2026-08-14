@@ -1,13 +1,11 @@
 /* Styles for note posts (short snippets) */
-.post--note {
-  max-width: 52rem;
-}
-
+@layer pages {
 .post--note .post__title {
   font-size: 1.25rem;
 }
 
 .post--note .post__meta {
-  color: #6b7280;
+  color: $color-text-light;
   font-size: 0.9rem;
+}
 }

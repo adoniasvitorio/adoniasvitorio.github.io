@@ -1,8 +1,5 @@
 title: Adonias Vitorio
 url: "https://adoniasvitorio.github.io"
-hide_site_feed_link: false
-linkedin_username: adoniasvitorio
-github_username:  adoniasvitorio
 
 google_analytics: G-MHDVWWGM96
 
@@ -18,7 +15,6 @@ plugins:
   - jekyll-feed
 
 minima:
-  hide_site_feed_link: true
   social_links:
     - title: "GitHub"
       url: "https://github.com/adoniasvitorio"

@@ -16,7 +16,7 @@ tags: [vim, snippet, gist]
 " -------------------------------
 call plug#begin()
   Plug 'dense-analysis/ale'                        " Async linting
-  Plug 'preservim/nerdtree' tes/2026-03-05-minimal-vim-script/                       " File explorer
+  Plug 'preservim/nerdtree'                                                          " File explorer
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Highlight file types in NERDTree
   Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Autocomplete + IntelliSense
 call plug#end()

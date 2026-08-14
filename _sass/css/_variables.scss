@@ -12,7 +12,6 @@ $color-accent-dark:  #1e3a5f;
 $font-family-base: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-size-base:   18px;
 $line-height-base: 1.7;
-$font-weight-light:   300;
 $font-weight-normal:  400;
 $font-weight-bold:    600;
 
@@ -41,14 +40,10 @@ $color-text-muted-dark:  #98a2b3;
 $color-accent-dark-600:  #7aa2ff;
 $color-accent-dark-500:  #9fb7ff;
 $color-border-dark:      #182028;
-$color-bg-subtle-dark:   #041022;
-$color-surface-dark:     #071026;
 
 // Additional tokens discovered in styles
 $color-bg-muted:          #f3f4f6;
 $color-blockquote-text-dark: #b8c7d6;
-$color-border-dark-2:     #10202b;
-$color-accent-contrast:   #cfe6ff;
 
 // Syntax highlighting tokens (light)
 $syntax-comment:          #6a737d;

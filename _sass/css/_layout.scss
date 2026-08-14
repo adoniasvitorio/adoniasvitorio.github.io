@@ -9,12 +9,6 @@
   }
 }
 
-.wrapper::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .site-main {
   padding: $spacing-lg 0;
   flex: 1;
