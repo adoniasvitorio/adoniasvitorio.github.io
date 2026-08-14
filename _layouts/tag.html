@@ -4,7 +4,7 @@ layout: base
 
 {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
 <section class="tag-archive">
-  <h1 class="tag-archive__heading">Tagged "{{ page.title }}"</h1>
+  <h1 class="tag-archive__heading">Marcado com "{{ page.title }}"</h1>
   <ul class="tag-archive__list">
     {%- if page.posts -%}
       {%- for post in page.posts -%}
@@ -18,5 +18,5 @@ layout: base
     {%- endif -%}
   </ul>
 
-  <p><a class="tag-archive__back" href="{{ '/' | relative_url }}">&larr; All posts</a></p>
+  <p><a class="tag-archive__back" href="{{ '/' | relative_url }}">&larr; Todos os posts</a></p>
 </section>

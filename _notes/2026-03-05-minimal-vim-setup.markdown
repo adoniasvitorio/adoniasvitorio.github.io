@@ -1,7 +1,7 @@
 ---
 layout: note
-title: Minimal .vimrc setup
-description: "Vim Setup: Simple, Reliable, and Battle-Tested"
+title: Setup mínimo de .vimrc
+description: "Vim: uma configuração simples, confiável e testada."
 date: 2026-03-05 10:00:00 -0300
 tags: [vim, snippet, gist]
 ---

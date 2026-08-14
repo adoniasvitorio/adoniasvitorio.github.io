@@ -1,43 +1,43 @@
 ---
 layout: post
-title:  "A minimal Vim setup that just works"
-description: "Vim Setup: Simple, Reliable, and Battle-Tested"
+title:  "Um setup minimalista de Vim que funciona"
+description: "Setup de Vim: simples, confiável e testado na prática"
 date:   2025-09-30 16:00:00 -0300
 tags: [vim, vimrc, cli, terminal, developer-tools, minimalism, productivity]
 ---
 
-I’ve been using the same Vim setup since 2019, and it still works well for everything I need: coding, writing, editing, and exploring projects across the languages I’ve worked with.
+Uso o mesmo setup de Vim desde 2019, e ele continua funcionando bem para tudo o que preciso: codar, escrever, editar e explorar projetos nas linguagens com as quais já trabalhei.
 
-Don’t get me wrong. I respect devs who maintain advanced Vim configurations with many plugins and custom scripts. That’s just not for me. *Keep it simple*.
+Não me entenda mal. Respeito quem mantém configurações avançadas de Vim, com muitos plugins e scripts personalizados. Só não é para mim. *Mantenha simples*.
 
-This post is for anyone who wants a clean, reliable Vim experience without unnecessary complexity. If you’re starting with Vim or prefer a minimalist setup, this guide is for you.
+Este post é para quem quer uma experiência de Vim limpa e confiável, sem complexidade desnecessária. Se você está começando com Vim ou prefere um setup minimalista, este guia é para você.
 
-## Why This Setup Works
+## Por que este setup funciona
 
-This configuration follows a few simple principles:
+Esta configuração segue alguns princípios simples:
 
-- **Minimal plugins** – only tools that solve real problems
-- **Fast startup** – no heavy frameworks
-- **Good defaults** – sensible indentation, search behavior, and navigation
-- **Modern features** – linting, formatting, and IntelliSense when needed
+- **Plugins mínimos** – apenas ferramentas que resolvem problemas reais
+- **Inicialização rápida** – sem frameworks pesados
+- **Bons padrões** – indentação, busca e navegação sensatas
+- **Recursos modernos** – linting, formatação e IntelliSense quando necessário
 
-It’s a setup that stays out of your way while still being powerful.
+É um setup que fica fora do seu caminho, mas continua poderoso.
 
-If you're curious, the full configuration is available here:
+Se você tem curiosidade, a configuração completa está disponível aqui:
 
 👉 [https://adoniasvitorio.github.io/notes/2026-03-05-minimal-vim-setup/](https://adoniasvitorio.github.io/notes/2026-03-05-minimal-vim-setup/)
 
-## Getting Started
+## Começando
 
-Vim reads settings from a file called `.vimrc`. You can find it in your home directory. If it doesn’t exist, create it:
+O Vim lê as configurações de um arquivo chamado `.vimrc`, que fica no seu diretório pessoal. Se ele não existir, crie com:
 
 ```sh
 vim ~/.vimrc
 ```
 
-Now let’s add some magic.
+Agora vamos adicionar um pouco de mágica.
 
-## Basic Settings
+## Configurações básicas
 ```vim
 set nocompatible            " Disable Vi compatibility for better Vim features
 colorscheme wildcharm       " Set a simple, readable color scheme
@@ -49,15 +49,15 @@ set number                  " Show line numbers
 set tabstop=2               " Set tab width to 2 spaces
 ```
 
-## Search
+## Busca
 ```vim
 set incsearch      " Highlight search matches as you type
 set ignorecase     " Ignore case when searching
 set smartcase      " Override 'ignorecase' if search contains uppercase letters
 ```
-This makes searching smoother. Vim will highlight matches as you type, ignore case unless you use capital letters, and help you find what you need faster.
+Isso deixa a busca mais fluida. O Vim vai destacar as correspondências enquanto você digita, ignorar maiúsculas/minúsculas a menos que você use letras maiúsculas e ajudar você a encontrar o que precisa mais rápido.
 
-## Helpful Visuals
+## Ajudas visuais
 ```vim
 set showcmd      " Display incomplete commands in the status line
 set showmode     " Show current mode (e.g., -- INSERT --) in the status line
@@ -65,18 +65,18 @@ set showmatch    " Briefly jump to matching bracket when typing
 set hlsearch     " Highlight all search matches in the file
 ```
 
-These settings show your current mode, match parentheses and brackets, and highlight search results. It’s all about making Vim more friendly.
+Essas configurações mostram o modo atual, fazem correspondência de parênteses e colchetes e destacam os resultados da busca. Tudo para deixar o Vim mais amigável.
 
-## Auto Completion
+## Autocompletar
 ```vim
 set wildmenu        " Enable enhanced command-line completion menu
 set wildmode=list:longest " Show completion options as a list, auto-complete the longest match
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " Ignore these file types in command-line completion
 ```
 
-Wildmenu gives you a nice auto-complete menu when you press TAB. It works like Bash and ignores files you probably don’t want to open in Vim.
+O wildmenu te dá um menu de autocompletar bem legal quando você pressiona TAB. Ele funciona como o Bash e ignora arquivos que você provavelmente não quer abrir no Vim.
 
-## Status Line
+## Barra de status
 ```vim
 set statusline=                       " Start with an empty status line
 set statusline+=\ %F\ %M\ %Y\ %R      " Show file name, modified flag, file type, and readonly flag
@@ -85,21 +85,21 @@ set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%% " Show current row, column,
 set laststatus=2                      " Always display the status line
 ```
 
-This shows the file name, mode, and your position in the file. It’s simple and useful.
+Isso mostra o nome do arquivo, o modo e sua posição nele. Simples e útil.
 
-## What changed
+## O que mudou
 
-Since I first wrote this, I made a few focused changes to my `.vimrc` that keep the setup minimal but bring modern conveniences:
+Desde que escrevi isso pela primeira vez, fiz algumas mudanças pontuais no meu `.vimrc` que mantêm o setup minimalista, mas trazem conveniências modernas:
 
-- Updated plugins: I use `coc.nvim` for LSP-like autocompletion and `vim-nerdtree-syntax-highlight` to improve NERDTree visuals.
-- New and tweaked settings: system clipboard integration (`unnamedplus`), consistent indentation (spaces, 2 cols), and true color support where available.
-- Useful shortcuts: buffer navigation, window movement, NERDTree toggles and CoC/ALE shortcuts to speed up editing.
+- Plugins atualizados: uso `coc.nvim` para autocompletar no estilo LSP e `vim-nerdtree-syntax-highlight` para melhorar o visual do NERDTree.
+- Configurações novas e ajustadas: integração com a área de transferência do sistema (`unnamedplus`), indentação consistente (espaços, 2 colunas) e suporte a cores verdadeiras (true color) quando disponível.
+- Atalhos úteis: navegação entre buffers, movimento entre janelas, atalhos do NERDTree e atalhos de CoC/ALE para agilizar a edição.
 
-Below I summarize the important bits from my current `.vimrc` so you can apply the same changes quickly.
+Abaixo, resumo as partes importantes do meu `.vimrc` atual para você aplicar as mesmas mudanças rapidamente.
 
-## Key parts of my updated `.vimrc`
+## Partes-chave do meu `.vimrc` atualizado
 
-Plugins (install with `vim-plug`):
+Plugins (instale com `vim-plug`):
 
 ```vim
 call plug#begin()
@@ -110,7 +110,7 @@ call plug#begin()
 call plug#end()
 ```
 
-General and appearance:
+Geral e aparência:
 
 ```vim
 set nocompatible
@@ -133,7 +133,7 @@ set statusline+=%=
 set statusline+=row:\ %l\ col:\ %c\ percent:\ %p%%
 ```
 
-Tabs and indentation (consistent, 2 spaces):
+Tabs e indentação (consistentes, 2 espaços):
 
 ```vim
 set tabstop=2
@@ -144,7 +144,7 @@ set autoindent
 set smartindent
 ```
 
-Searching and completion improvements:
+Melhorias de busca e autocompletar:
 
 ```vim
 set incsearch
@@ -156,7 +156,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 ```
 
-Useful shortcuts (these are in my `.vimrc`):
+Atalhos úteis (estes estão no meu `.vimrc`):
 
 ```vim
 " Buffer navigation
@@ -176,7 +176,7 @@ nnoremap <F3> :NERDTreeFind<CR>
 autocmd VimEnter * if !argc() | NERDTree | endif
 ```
 
-NERDTree syntax highlighting and behavior:
+Realce de sintaxe e comportamento do NERDTree:
 
 ```vim
 let NERDTreeShowHidden=1
@@ -187,7 +187,7 @@ let g:NERDTreeSyntaxEnabledExtensions = ['*']
 let g:NERDTreeSyntaxHideIcons = 1
 ```
 
-CoC (autocomplete / IntelliSense) small but useful mappings:
+Mapeamentos pequenos, mas úteis, do CoC (autocompletar / IntelliSense):
 
 ```vim
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -203,7 +203,7 @@ nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 ```
 
-ALE (linting / fixing) tweaks:
+Ajustes do ALE (linting / correção):
 
 ```vim
 let g:ale_lint_on_text_changed = 'always'
@@ -224,21 +224,21 @@ nnoremap <Leader>f :ALEFix<CR>
 nnoremap <Leader>el :ALEResults<CR>
 ```
 
-Auto-reload when files change externally:
+Recarga automática quando arquivos mudam externamente:
 
 ```vim
 set autoread
 autocmd FocusGained,BufEnter * checktime
 ```
 
-## Final
-After saving your `.vimrc`, restart Vim or reload it with:
+## Finalizando
+Depois de salvar seu `.vimrc`, reinicie o Vim ou recarregue-o com:
 ```vim
 :source ~/.vimrc
 ```
 
-This keeps the setup small and fast while adding modern editor conveniences: clipboard integration, consistent indentation, LSP-like completion via `coc.nvim`, better NERDTree visuals, and fast navigation shortcuts.
+Isso mantém o setup pequeno e rápido, adicionando conveniências modernas de editor: integração com a área de transferência, indentação consistente, autocompletar no estilo LSP com `coc.nvim`, visual melhor do NERDTree e atalhos rápidos de navegação.
 
-If you want, I can also paste my full `.vimrc` into the post or create a Gist with it.
+Se quiser, também posso colar meu `.vimrc` completo no post ou criar um Gist com ele.
 
-And that’s it. You now have a Vim setup that’s clean, fast, and easy to use. It’s the same one I’ve trusted for years, and I hope it serves you just as well.
+E é isso. Agora você tem um setup de Vim limpo, rápido e fácil de usar. É o mesmo que eu uso há anos, e espero que sirva para você tão bem quanto serviu para mim.

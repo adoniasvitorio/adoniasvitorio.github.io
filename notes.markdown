@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Notes
+title: Notas
 permalink: /notes/
 ---
 
-This page is a collection of short notes, ideas, and useful snippets that don’t quite fit as full blog posts but are still worth keeping and sharing. Here you’ll find small discoveries, code fragments, quick tips, references, and occasional thoughts gathered over time. 
+Esta página reúne notas curtas, ideias e trechos úteis que não chegam a ser posts completos, mas que valem ser guardados e compartilhados. Aqui você encontra pequenas descobertas, fragmentos de código, dicas rápidas, referências e pensamentos que fui juntando ao longo do tempo.
 
 {% assign posts = site.notes %}
 

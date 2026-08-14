@@ -1,22 +1,42 @@
 ---
 layout: page
-title: About
+title: Sobre
 permalink: /about/
 ---
 
-## Hello World!
-I’m Adonias, Software Engineer, musician and student by vocation. I’m interested in topics that go beyond time and spirit: history, philosophy, mathematics, and everything that challenges the mind and feeds the soul.
+## Olá, eu sou Adonias.
 
-This blog was created from the wish to record experiences, share knowledge, and most of all, invite others to do the same. 
+Sou engenheiro de software, músico e estudante por vocação.
 
-Here you will find notes about software engineering, daily learnings, book reflections, personal projects, and other journeys from my path.
+Gosto de estudar e entender como as coisas funcionam. Tenho um interesse especial por Engenharia de Software e Ciência da Computação, tanto em seus aspectos práticos quanto em seus fundamentos. Gosto de explorar desde os princípios da computação e do desenvolvimento de software até sistemas, produtos, negócios e as ideias que conectam tudo isso.
 
-## A bit about my work
-I’m a Fullstack Software Engineer with experience in web development. I work with REST and GraphQL APIs, modern web and mobile interfaces, and event-driven microservices based-system.
+Quando encontro um problema, minha reação é tentar olhar além da superfície. Quero entender as pessoas envolvidas, os processos e as estruturas por trás do que está acontecendo.
 
-I like solving problems with autonomy, testing ideas and learning during the process.
+É também sobre isso que este blog fala.
 
-## Let’s talk?
-If any idea here invites you, feel free to write me. I enjoy sharing experiences and learning from other perspectives.
+## Por que escrevo
 
-You can also find me on LinkedIn.
+Escrevo para registrar o que aprendo, organizar minhas ideias e compartilhar coisas que me interessam.
+
+Aqui você vai encontrar reflexões sobre engenharia de software, fundamentos da computação, sistemas, produtos, livros, projetos e outras coisas que estou tentando compreender.
+
+Este espaço é, antes de tudo, uma forma de tornar meu próprio aprendizado mais consciente. Ao escrever, consigo organizar melhor o que penso, revisitar ideias e perceber o que ainda não compreendo bem.
+
+Acredito que o processo de aprender, pensar e construir é o que vai me ajudar a ser uma pessoa melhor e um engenheiro mais qualificado.
+
+## Sobre meu trabalho
+
+Sou engenheiro de software e trabalho na construção de aplicações, sistemas distribuídos, APIs e produtos digitais.
+
+Ao longo da minha carreira, participei de diferentes etapas desse processo, desde entender problemas de negócio e modelar soluções até desenhar arquiteturas e construir sistemas em produção.
+
+Hoje, me interesso especialmente pela interseção entre software, produtos e negócios: usar tecnologia para transformar processos complexos em sistemas simples.
+
+Gosto de construir, mas também gosto de refinar o que construo. Remover excessos, entender os trade-offs e encontrar maneiras mais simples de resolver problemas reais.
+
+## Vamos conversar?
+
+Se alguma coisa por aqui fizer você pensar, despertar uma curiosidade ou provocar uma nova ideia, fique à vontade para me escrever.
+
+Você também pode me encontrar no LinkedIn.
+
