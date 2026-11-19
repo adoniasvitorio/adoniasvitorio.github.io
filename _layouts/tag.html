@@ -1,22 +1,16 @@
 ---
-layout: base
+layout: default
 ---
-
-{%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
 <section class="tag-archive">
-  <h1 class="tag-archive__heading">Marcado com "{{ page.title }}"</h1>
+  {%- assign page_lang = page.lang | default: site.lang -%}
+  {%- assign locale = site.data.translations[page_lang] -%}
+  <h1 class="tag-archive__heading">{{ locale.tag_heading | replace: '%tag%', page.title | escape }}</h1>
   <ul class="tag-archive__list">
-    {%- if page.posts -%}
-      {%- for post in page.posts -%}
-      <li class="tag-archive__item">
-        <a class="tag-archive__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="tag-archive__date">{{ post.date | date: date_format }}</span>
-      </li>
-      {%- endfor -%}
-    {%- else -%}
-      <li class="tag-archive__item">No posts found for this tag.</li>
-    {%- endif -%}
+    {%- for post in page.posts -%}
+    <li class="tag-archive__item">
+      {%- include post-preview.html post=post show_tags=false show_date=true -%}
+    </li>
+    {%- endfor -%}
   </ul>
-
-  <p><a class="tag-archive__back" href="{{ '/' | relative_url }}">&larr; Todos os posts</a></p>
+  <a class="tag-archive__back" href="{{ locale.home_url | relative_url }}">{{ locale.home_link | escape }}</a>
 </section>

@@ -1,39 +1,24 @@
-title: Adonias Vitorio
+title: Adonias Vitorio's Essays
 url: "https://adoniasvitorio.github.io"
-lang: pt-BR
-
-google_analytics: G-MHDVWWGM96
-
-sass:
-  sass_dir: _sass
-  style: compressed
-  quiet_deps: true
-  silence_deprecations: [import]
-
+lang: en
 
 theme: minima
 plugins:
   - jekyll-feed
 
-minima:
-  date_format: "%d/%m/%Y"
-  social_links:
-    - title: "GitHub"
-      url: "https://github.com/adoniasvitorio"
-      icon: "fab fa-github"
-    - title: "LinkedIn"
-      url: "https://www.linkedin.com/in/adoniasvitorio/"
-      icon: "fab fa-linkedin"
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
 
-# Notes collection for short snippets / gists
-collections:
-  notes:
-    output: true
-    permalink: /notes/:name/
+minima:
+  date_format: "%b %-d, %Y"
 
 defaults:
   - scope:
       path: ""
-      type: notes
+      type: posts
     values:
-      layout: note
+      lang: en
+
+github_username: adoniasvitorio
+linkedin_username: adoniasvitorio

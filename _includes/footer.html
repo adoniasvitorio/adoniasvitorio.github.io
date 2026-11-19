@@ -1,12 +1,48 @@
-<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
-
 <footer class="site-footer h-card">
+  {%- assign page_lang = page.lang | default: site.lang -%}
+  {%- assign locale = site.data.translations[page_lang] -%}
+
+  <data class="u-url" href="{{ locale.home_url | relative_url }}"></data>
   <div class="wrapper">
     <div class="site-footer__inner">
-      <p class="site-footer__tagline">Ubi bene, ibi patria.</p>
-      <div class="site-footer__social">
+      <p class="site-footer__tagline">{{ locale.footer_tagline | escape }}</p>
+
+      <nav class="site-footer__links" aria-label="{{ locale.external_links | escape }}">
+        <a class="site-footer__icon-link" href="{{ '/feed.xml' | relative_url }}" aria-label="{{ locale.rss_label | escape }}" title="{{ locale.rss_label | escape }}">
+          <svg class="site-footer__icon" aria-hidden="true"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>
+        </a>
         {%- include social.html -%}
-      </div>
+      </nav>
     </div>
   </div>
 </footer>
+
+<script>
+  const themeToggle = document.querySelector(".site-header__theme-toggle");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function updateThemeToggle() {
+    const isDark = document.documentElement.dataset.theme === "dark"
+      || (!document.documentElement.dataset.theme && systemTheme.matches);
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-label", isDark ? themeToggle.dataset.labelLight : themeToggle.dataset.labelDark);
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.dataset.theme = isDark ? "dark" : "light";
+    }
+  }
+
+  if (themeToggle) {
+    updateThemeToggle();
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.documentElement.dataset.theme === "dark"
+        || (!document.documentElement.dataset.theme && systemTheme.matches);
+      const theme = isDark ? "light" : "dark";
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("theme", theme);
+      updateThemeToggle();
+    });
+    systemTheme.addEventListener("change", () => {
+      if (!document.documentElement.dataset.theme) updateThemeToggle();
+    });
+  }
+</script>

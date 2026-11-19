@@ -3,50 +3,42 @@
 module Jekyll
   module TagArchives
     class Archive < Jekyll::Page
-      def initialize(site, tag, slug, docs)
+      def initialize(site, tag, slug, lang, posts)
         @site = site
         @base = site.source
-        @dir  = File.join("tag", slug)
+        prefix = lang == "pt-BR" ? "pt-br" : nil
+        @dir = prefix ? File.join(prefix, "tag", slug) : File.join("tag", slug)
         @name = "index.html"
+        translation_url = lang == "pt-BR" ? "/tag/#{slug}/" : "/pt-br/tag/#{slug}/"
         @data = {
           "layout" => "tag",
-          "title"  => tag,
-          "posts"  => docs,
+          "title" => tag,
+          "lang" => lang,
+          "translation_url" => translation_url,
+          "posts" => posts,
         }
         @content = ""
         process(@name)
       end
     end
 
-    class TagArchivesGenerator < Jekyll::Generator
+    class Generator < Jekyll::Generator
       safe true
       priority :low
 
       def generate(site)
         tags = Hash.new { |hash, key| hash[key] = [] }
 
-        docs_for(site).each do |doc|
-          Array(doc.data["tags"]).each { |tag| tags[tag] << doc }
+        site.posts.docs.each do |post|
+          lang = post.data["lang"] || site.config["lang"]
+          Array(post.data["tags"]).each { |tag| tags[[lang, tag]] << post }
         end
 
-        tags.sort_by { |tag, _| tag.downcase }.each do |tag, docs|
+        tags.sort_by { |(lang, tag), _| [lang, tag.downcase] }.each do |(lang, tag), posts|
           slug = Jekyll::Utils.slugify(tag, mode: "default")
-          sorted = docs.sort_by { |doc| doc.date }.reverse
-          site.pages << Archive.new(site, tag, slug, sorted)
+          sorted_posts = posts.sort_by(&:date).reverse
+          site.pages << Archive.new(site, tag, slug, lang, sorted_posts)
         end
-      end
-
-      private
-
-      def docs_for(site)
-        docs = site.posts.docs.dup
-        site.collections.each_value do |collection|
-          next if collection.label == "posts"
-          next unless collection.write?
-
-          docs.concat(collection.docs)
-        end
-        docs
       end
     end
   end
